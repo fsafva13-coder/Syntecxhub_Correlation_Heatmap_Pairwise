@@ -1,0 +1,59 @@
+
+CORRELATION ANALYSIS REPORT
+Generated: 2026-03-24 11:45:36
+============================================================
+
+DATASET
+Features:  ['study_hours', 'sleep_hours', 'stress_level', 'attendance', 'math_score', 'science_score', 'english_score', 'final_grade']
+Rows:      500
+
+ALL PAIRWISE CORRELATIONS (sorted by strength)
+   Variable A    Variable B  Pearson r Strength Direction
+   math_score   final_grade      0.878   Strong  Positive
+science_score   final_grade      0.802   Strong  Positive
+   math_score science_score      0.745   Strong  Positive
+  study_hours    math_score      0.725   Strong  Positive
+  study_hours   final_grade      0.711   Strong  Positive
+  study_hours    attendance      0.709   Strong  Positive
+english_score   final_grade      0.617 Moderate  Positive
+  study_hours science_score      0.553 Moderate  Positive
+  study_hours english_score      0.508 Moderate  Positive
+   attendance    math_score      0.477 Moderate  Positive
+   attendance   final_grade      0.465 Moderate  Positive
+  sleep_hours  stress_level     -0.449 Moderate  Negative
+   math_score english_score      0.397     Weak  Positive
+   attendance science_score      0.373     Weak  Positive
+   attendance english_score      0.345     Weak  Positive
+science_score english_score      0.267     Weak  Positive
+ stress_level    math_score     -0.215     Weak  Negative
+ stress_level   final_grade     -0.201     Weak  Negative
+ stress_level science_score     -0.169     Weak  Negative
+  sleep_hours    math_score      0.134     Weak  Positive
+  sleep_hours science_score      0.132     Weak  Positive
+  sleep_hours   final_grade      0.084     Weak  Positive
+  study_hours   sleep_hours     -0.074     Weak  Negative
+  sleep_hours    attendance     -0.066     Weak  Negative
+ stress_level english_score     -0.064     Weak  Negative
+  sleep_hours english_score     -0.023     Weak  Negative
+ stress_level    attendance     -0.014     Weak  Negative
+  study_hours  stress_level     -0.013     Weak  Negative
+
+STRONGEST POSITIVE RELATIONSHIP
+math_score vs final_grade
+Pearson r = 0.878
+Interpretation: As math_score increases, final_grade tends to increase proportionally.
+This is the strongest signal in the dataset and should be prioritized in any predictive model.
+
+STRONGEST NEGATIVE RELATIONSHIP
+sleep_hours vs stress_level
+Pearson r = -0.449
+Interpretation: As sleep_hours increases, stress_level tends to decrease.
+This inverse relationship is statistically meaningful and should be monitored.
+
+CHART NOTES
+- Heatmap upper triangle masked to remove redundant symmetric values
+- Absolute heatmap removes direction to focus purely on relationship strength
+- Pairplot diagonal shows KDE of each variable individually
+- Regression lines added to scatter plots with r values annotated
+- Blue dots = positive correlation, Pink dots = negative correlation
+============================================================
